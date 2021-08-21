@@ -1,0 +1,58 @@
+@import './vars.scss';
+
+.data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  .cardData{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+    
+    &>*{
+      font-family: 'Oswald', sans-serif;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &__number{
+      font-size: 65px;
+      color: $main-yellow;
+    }
+
+    &__text{
+      font-size: 50px;
+      font-weight: bold;
+      color: $second-black;
+    }
+
+    &__subText{
+      font-size: 14px;
+      color: $main-gray;
+    }
+
+    &__line{
+      background-color: $main-yellow;
+      height: 5px;
+      margin-top: 10px;
+      width: 70%;
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .data{
+    flex-direction: row;
+    justify-content: space-around;
+    .cardData{
+      margin-bottom: 0;
+    }
+  }
+}
