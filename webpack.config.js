@@ -15,6 +15,21 @@ module.exports = {
   module:{
     rules:[
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          }
+        ],
+      },
+      {
+        test: /\.(png|jpg|svg)$/i,  
+        type: 'asset/resource',
+        generator:{
+          filename: 'imgs/[hash][ext]'
+        }
+      },
+      {
         test: /\.(s?css)$/i,
         use:[
           {
@@ -28,10 +43,6 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader'
       },
-      {
-        test: /\.(png|jpg|svg)$/i,
-        type: 'asset',
-      }
     ]
   },
   plugins:[
