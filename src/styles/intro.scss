@@ -15,11 +15,18 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin-bottom: 20px;
 
   &__title{
-    font-size: 40px;
+    font-size: 38px;
     text-align: center;
+  }
+}
+
+@media screen and (min-width:425px){
+  .intro{
+    &__title{
+      font-size: 40px;
+    }
   }
 }
 
@@ -29,8 +36,6 @@
       font-size: 60px;
     }
   }
-
-
 }
 
 @media screen and (min-width:910px){

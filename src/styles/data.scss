@@ -22,18 +22,19 @@
     }
 
     &__number{
-      font-size: 65px;
+      font-size: 55px;
       color: $main-yellow;
+      margin-bottom: -10px;
     }
 
     &__text{
-      font-size: 50px;
+      font-size: 40px;
       font-weight: bold;
       color: $second-black;
     }
 
     &__subText{
-      font-size: 14px;
+      font-size: 20px;
       color: $main-gray;
     }
 
@@ -49,6 +50,18 @@
 
 @media screen and (min-width: 768px) {
   .data{
+    // padding: 20px 50px ;
+    flex-direction: row;
+    justify-content: space-around;
+    .cardData{
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .data{
+    padding: 20px 50px ;
     flex-direction: row;
     justify-content: space-around;
     .cardData{

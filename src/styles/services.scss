@@ -1,0 +1,61 @@
+@import './vars.scss';
+
+.services{
+  &__presentation{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 120px;
+    background: $main-yellow;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+
+  &__cards{
+
+  }
+}
+
+.serviceCard{
+
+  padding: 40px 20px;
+  color: white;
+
+  img{
+    margin-bottom: 20px;
+  }
+
+  &__title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__info{
+    font-size: 14px;
+  }
+
+  &:first-child{
+    background-color: #282828;
+  }
+  &:nth-child(2){
+    background-color: #222222;
+  }
+  &:nth-child(3){
+    background-color: #1B1B1B;
+  }
+}
+
+
+
+@media screen and (min-width:768px) {
+  .services{
+    &__presentation{
+      font-size: 24px;
+    }
+  }
+  
+}
