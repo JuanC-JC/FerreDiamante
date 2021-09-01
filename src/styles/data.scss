@@ -4,14 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 50px 30px;
 
   .cardData{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     
     &>*{
       font-family: 'Oswald', sans-serif;
@@ -22,26 +21,33 @@
     }
 
     &__number{
-      font-size: 55px;
+      font-size: 68px;
       color: $main-yellow;
-      margin-bottom: -10px;
+      line-height: 1.2em;
+      font-weight: 600;
     }
 
     &__text{
-      font-size: 40px;
-      font-weight: bold;
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.8em;
       color: $second-black;
     }
 
     &__subText{
-      font-size: 20px;
+      font-size: 16px;
+      font-weight: 500;
       color: $main-gray;
+      letter-spacing: 1.1px;
+      line-height: 1;
     }
 
     &__line{
       background-color: $main-yellow;
       height: 5px;
-      margin-top: 10px;
+      margin: 19px 0;
+      // margin-top: 10px;
       width: 70%;
     }
   }
