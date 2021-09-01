@@ -3,6 +3,7 @@ import './styles/data.scss';
 import './styles/info.scss';
 import './styles/categories.scss';
 import './styles/services.scss'
+import './styles/footer.scss'
 
 
 import deliveryIcon from '../src/assets/delivery.svg'
