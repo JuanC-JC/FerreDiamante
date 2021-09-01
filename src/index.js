@@ -1,3 +1,4 @@
+import './styles/header.scss'
 import './styles/intro.scss';
 import './styles/data.scss';
 import './styles/info.scss';
