@@ -1,41 +1,57 @@
 @import './vars.scss';
 
 .services{
+  overflow: hidden;
+
   &__presentation{
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 120px;
-    background: $main-yellow;
+    height: 150px;
     font-size: 20px;
     font-weight: bold;
     color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.35) 100%, rgba(0, 0, 0, 0.35) 100%), url(../assets/banner.jpg) no-repeat center bottom / cover;
   }
 
-  &__cards{
-
-  }
 }
 
 .serviceCard{
-
-  padding: 40px 20px;
+  text-align: center;
+  padding: 40px 30px;
   color: white;
+  text-align: justify;
+  cursor: pointer;
 
-  img{
-    margin-bottom: 20px;
+  &:hover{
+
+    svg{
+      transform: scale(1.2);
+      fill:transparent;
+    }
+  }
+  svg{
+    fill: #FFA826;
+    transition: all 500ms;
+  }
+  
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__title{
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   &__info{
     font-size: 14px;
+    line-height: 1.3rem;
   }
 
   &:first-child{
@@ -49,13 +65,89 @@
   }
 }
 
-
-
 @media screen and (min-width:768px) {
   .services{
+
+    &__cards{
+      display: flex;
+    }
+
     &__presentation{
+      height: 170px;
       font-size: 24px;
     }
   }
   
+  .serviceCard{
+    width: 34%;
+    height: 400px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &__title{
+      margin: 25px 0;
+    }
+  }
+}
+
+@media screen and (min-width:910px){
+  .services{
+    &__presentation{
+      font-size: 28px;
+    }
+  }
+  .serviceCard{
+    height: 450px;
+    padding: 40px 25px;
+
+    &__container{
+      height: 325px;
+    }
+
+    svg{
+      height: 80px;
+      width: auto;
+    }
+
+    &__title{
+      font-size: 20px;
+      margin: 30px 0;
+    }
+
+    &__info{
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width:1024px){
+  .serviceCard{
+
+    padding: 40px 40px;
+
+    &__container{
+      height: 350px;
+    }
+
+    svg{
+      height: 90px;
+    }
+
+    &__title{
+      margin: 35px 0;
+      font-size: 24px;
+    }
+
+    
+  }
+}
+
+@media screen and (min-width:1240px){
+  .serviceCard{
+    padding: 40px 50px;
+  }
 }
