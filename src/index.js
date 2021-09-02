@@ -5,6 +5,7 @@ import './styles/info.scss';
 import './styles/categories.scss';
 import './styles/services.scss'
 import './styles/footer.scss'
+import './styles/partnerts.scss'
 
 
 
