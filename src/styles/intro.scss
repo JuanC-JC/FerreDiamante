@@ -22,6 +22,17 @@ a{
   justify-content: center;
   align-items: center;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+
+  &__text{
+    max-width: 600px;
+    margin-top: 30px;
+    line-height: 1.4em;
+    font-size: 18px;
+    text-align: center;
+  }
 
   &__title{
     font-size: 38px;

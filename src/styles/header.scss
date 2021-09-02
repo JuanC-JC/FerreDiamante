@@ -12,12 +12,14 @@
 
   &__icon{
     height: 15px;
+    cursor: pointer;
   }
 
   &__logo{
     position: absolute;
     right: calc(50% - 45.5px);
     height: 31px;
+
     .logo{
       width: 91px;
       height: 31px;
@@ -32,24 +34,57 @@
     z-index: 1;
     top: 51px;
     left: 0px;
-    background-color: $main-gray;
+    background-color: #282828;
     width: 100%;
     padding: 0  50px;
+
     li{
       padding: 10px 0;
       text-align: center;
       text-shadow: 0.5px 0.5px 0.5px rgb(66, 65, 65);
       font-weight: 500;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover{
+
+        &::after{
+          animation: headerNav 500ms 10ms forwards;
+          content: '';
+          height: 3px;
+          background: white;
+          width: 0%;
+          position: absolute;
+          bottom: 0;
+        }
+      }
 
       a{
         color: white;
         cursor: pointer;
       }
     }
+
   }
+
+
+
+  @keyframes headerNav {
+    from{
+        width: 20%;
+    }
+
+    to{
+      width: 70%;
+    }
+  }
+
+
   .menu--visibility{
     max-height: 250px;
-    padding: 10px 50px;
+    padding: 10px 0px;
     transition: all 0.4s;
 }
 
@@ -63,12 +98,16 @@
 
 @media (min-width:768px) {
   .header{
-    // position: absolute;
-    // inset: 0 0 0 0 ;
-    box-shadow: none;
+    position: absolute;
     height: 70px;
     justify-content: space-between;
-    // background-color: transparent;
+    box-shadow: none;
+    background: none;
+    margin: 0px 20px;
+    margin-top: 10px;
+    width: calc(100% - 40px);
+    border-bottom: 1px solid white;
+
     &__icon{
       display: none;
     }
