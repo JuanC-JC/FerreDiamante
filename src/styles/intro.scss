@@ -23,6 +23,7 @@ a{
   align-items: center;
   padding: 20px;
 
+
   &__title{
     font-size: 38px;
     text-align: center;
@@ -49,4 +50,10 @@ a{
   .intro{
     height: 600px;
   }
+}
+@media (min-width:1200px) {
+  .intro{
+    margin-bottom: 180px;
+  }
+  
 }
