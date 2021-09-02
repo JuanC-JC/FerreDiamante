@@ -14,9 +14,9 @@ a{
 }
 
 .intro{
-  background: linear-gradient( rgba(0, 0, 0, 0.35) 100%, rgba(0, 0, 0, 0.35)100%), url("../assets/home.png") center center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.35) 100%, rgba(0, 0, 0, 0.35)100%), url("../assets/Home.jpg") center center no-repeat;
   background-size: cover;
-  height: 450px;
+  height: 400px;
   color: white;
   display: flex;
   justify-content: center;
@@ -41,7 +41,6 @@ a{
     text-transform: uppercase;
     letter-spacing: 0.7px;
     text-align: center;
-    // text-shadow: 2px 2px 4px #000000;
   }
   .subtitle{
     font-size: 35px;
@@ -60,7 +59,7 @@ a{
 
 @media screen and (min-width:768px){
   .intro{
-    height: 600px;
+    height: 650px;
     &__title{
       font-size: 70px;
       letter-spacing: 5px;
