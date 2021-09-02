@@ -6,7 +6,7 @@
   
   .categories__cards{
     display: grid;
-    gap: 20px;
+    gap: 30px;
     justify-items: center;
   }
 
@@ -19,7 +19,7 @@
   position: relative;
   width: 100%;
   min-width: 280px;
-  max-width: 320px;
+  max-width: 350px;
   height: 120px;
   border-radius: 5px;
   padding: 10px 15px;
@@ -38,6 +38,9 @@
   }
 
   &--right{
+
+    padding-left: 35px;
+
     svg{
       right: 0;
       top: 0;
@@ -46,6 +49,8 @@
 
   &--left{
     flex-direction: row-reverse;
+
+    padding-right: 35px;
 
     p{
       text-align: right;
@@ -89,5 +94,17 @@
 @media screen and (min-width:910px) {
   .categories{
     padding: 80px 20px;
+
+    .categories__cards{
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(2,380px);
+    }
+
+    .cardCategorie{
+      max-width: none;
+    }
+
   }
 }
