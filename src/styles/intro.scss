@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
 
 .intro{
   background: linear-gradient( rgba(0, 0, 0, 0.35) 100%, rgba(0, 0, 0, 0.35)100%), url("../assets/home.png") center center no-repeat;
