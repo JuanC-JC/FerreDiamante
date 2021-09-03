@@ -8,25 +8,18 @@ import './styles/contact.scss'
 import './styles/footer.scss'
 import './styles/partnerts.scss'
 
-
-
-import deliveryIcon from '../src/assets/delivery.svg'
-import deliveryOutlineIcon from '../src/assets/deliveryOutline.svg'
-
-const deliveryCard = document.querySelector('#deliveryCard')
-
-// deliveryCard.addEventListener('mouseover',()=>{
-//   deliveryCard.querySelector('img').src = deliveryOutlineIcon
-// })
-
-// deliveryCard.addEventListener('mouseleave',()=>{
-//   deliveryCard.querySelector('img').src = deliveryIcon
-// })
-
-
 //header
 const headerIcon = document.querySelector('.header__icon')
 headerIcon.addEventListener('click',display)
+
+//whatsapp
+const contactWmessage = document.querySelector('.contact--whatsapp')
+contactWmessage.addEventListener('click',()=> sendWaMessage('3013437122','Hola, estoy interesado en recibir más información. Gracias'))
+
+//redirecciona arriba
+const  topPage = document.querySelector('.contact--arrowUp')
+console.log(topPage)
+topPage.addEventListener('click',moveUp)
 
 function display(){
 
@@ -41,3 +34,30 @@ function display(){
     closeIcon.classList.toggle("hidden")
 
 }
+
+function sendWaMessage (number, textMessage){
+
+  const message = `https://wa.me/57${number}?text=${encodeURIComponent(textMessage)}`
+
+  window.open(message,'_blank').focus()
+}
+
+function moveUp (){
+  window.scrollTo(0,0)
+}
+
+
+const dataYears = document.getElementById('dataYears')
+
+dataYears.textContent = 0
+
+const timer = setInterval(()=>{
+  dataYears.textContent = parseInt(dataYears.textContent) + 1
+
+
+  if(dataYears.textContent == 20){
+    clearInterval(timer)
+  }
+
+
+},70)
