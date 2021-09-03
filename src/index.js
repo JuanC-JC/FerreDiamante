@@ -8,6 +8,8 @@ import './styles/contact.scss'
 import './styles/footer.scss'
 import './styles/partnerts.scss'
 
+import './observers'
+
 //header
 const headerIcon = document.querySelector('.header__icon')
 headerIcon.addEventListener('click',display)
@@ -18,11 +20,10 @@ contactWmessage.addEventListener('click',()=> sendWaMessage('3013437122','Hola, 
 
 //redirecciona arriba
 const  topPage = document.querySelector('.contact--arrowUp')
-console.log(topPage)
+// console.log(topPage)
 topPage.addEventListener('click',moveUp)
 
 function display(){
-
   //para acceder menu
   let menu = document.querySelector('#menuHeader')
       menu.classList.toggle("menu--visibility")
@@ -32,7 +33,6 @@ function display(){
   let closeIcon = document.querySelector('.close')
     menuIcon.classList.toggle("hidden")
     closeIcon.classList.toggle("hidden")
-
 }
 
 function sendWaMessage (number, textMessage){
@@ -46,18 +46,3 @@ function moveUp (){
   window.scrollTo(0,0)
 }
 
-
-const dataYears = document.getElementById('dataYears')
-
-dataYears.textContent = 0
-
-const timer = setInterval(()=>{
-  dataYears.textContent = parseInt(dataYears.textContent) + 1
-
-
-  if(dataYears.textContent == 20){
-    clearInterval(timer)
-  }
-
-
-},70)
