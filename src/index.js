@@ -10,7 +10,17 @@ import './styles/partnerts.scss'
 
 //header
 const headerIcon = document.querySelector('.header__icon')
-headerIcon.addEventListener('click',display)
+headerIcon.addEventListener('click',displayMenu)
+
+let linksMenu = document.querySelectorAll("li")
+
+linksMenu.forEach(link => {
+  link.addEventListener('click',collapseMenu)
+});
+
+
+
+
 
 //whatsapp
 const contactWmessage = document.querySelector('.contact--whatsapp')
@@ -18,11 +28,15 @@ contactWmessage.addEventListener('click',()=> sendWaMessage('3013437122','Hola, 
 
 //redirecciona arriba
 const  topPage = document.querySelector('.contact--arrowUp')
-console.log(topPage)
 topPage.addEventListener('click',moveUp)
 
-function display(){
 
+
+
+
+
+
+function displayMenu(){
   //para acceder menu
   let menu = document.querySelector('#menuHeader')
       menu.classList.toggle("menu--visibility")
@@ -34,6 +48,19 @@ function display(){
     closeIcon.classList.toggle("hidden")
 
 }
+
+function collapseMenu (){
+  //para esconder el menu
+  let menu = document.querySelector('#menuHeader')
+  menu.classList.remove("menu--visibility")
+    //cambiar su imagen
+  let menuIcon = document.querySelector('.menu')
+  let closeIcon = document.querySelector('.close')
+    menuIcon.classList.toggle("hidden")
+    closeIcon.classList.toggle("hidden")
+
+}
+
 
 function sendWaMessage (number, textMessage){
 
