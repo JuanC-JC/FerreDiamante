@@ -45,7 +45,7 @@ observerData.observe(dataYears)
 
 const appearOptions = {
   threshold: 0.8,
-  rootMargin:'0px 100px -150px 0px'
+  rootMargin:'0px 800px -100px 0px'
 
 };
 
