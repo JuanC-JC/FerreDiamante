@@ -8,6 +8,8 @@ import './styles/contact.scss'
 import './styles/footer.scss'
 import './styles/partnerts.scss'
 
+import './observers'
+
 //header
 const headerIcon = document.querySelector('.header__icon')
 headerIcon.addEventListener('click',displayMenu)
@@ -19,9 +21,6 @@ linksMenu.forEach(link => {
 });
 
 
-
-
-
 //whatsapp
 const contactWmessage = document.querySelector('.contact--whatsapp')
 contactWmessage.addEventListener('click',()=> sendWaMessage('3013437122','Hola, estoy interesado en recibir más información. Gracias'))
@@ -29,12 +28,6 @@ contactWmessage.addEventListener('click',()=> sendWaMessage('3013437122','Hola, 
 //redirecciona arriba
 const  topPage = document.querySelector('.contact--arrowUp')
 topPage.addEventListener('click',moveUp)
-
-
-
-
-
-
 
 function displayMenu(){
   //para acceder menu
@@ -46,7 +39,6 @@ function displayMenu(){
   let closeIcon = document.querySelector('.close')
     menuIcon.classList.toggle("hidden")
     closeIcon.classList.toggle("hidden")
-
 }
 
 function collapseMenu (){
@@ -73,18 +65,3 @@ function moveUp (){
   window.scrollTo(0,0)
 }
 
-
-const dataYears = document.getElementById('dataYears')
-
-dataYears.textContent = 0
-
-const timer = setInterval(()=>{
-  dataYears.textContent = parseInt(dataYears.textContent) + 1
-
-
-  if(dataYears.textContent == 20){
-    clearInterval(timer)
-  }
-
-
-},70)
