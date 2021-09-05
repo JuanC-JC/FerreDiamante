@@ -9,6 +9,7 @@ import './styles/footer.scss'
 import './styles/partnerts.scss'
 
 import './observers'
+import './slider'
 
 //header
 const headerIcon = document.querySelector('.header__icon')

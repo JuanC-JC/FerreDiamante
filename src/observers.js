@@ -51,7 +51,7 @@ const appearOptions = {
 
 const appearOnScroll = new IntersectionObserver((entries,appearOnScroll)=>{
 
-  console.log(entries[0])
+  // console.log(entries[0])
 
   entries.forEach(entry=>{
     if(entry.isIntersecting){
