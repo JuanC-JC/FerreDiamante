@@ -24,7 +24,7 @@ linksMenu.forEach(link => {
 
 //whatsapp
 const contactWmessage = document.querySelector('.contact--whatsapp')
-contactWmessage.addEventListener('click',()=> sendWaMessage('3013437122','Hola, estoy interesado en recibir más información. Gracias'))
+contactWmessage.addEventListener('click',()=> sendWaMessage('3125046724','Hola, estoy interesado en recibir más información. Gracias'))
 
 //redirecciona arriba
 const  topPage = document.querySelector('.contact--arrowUp')
