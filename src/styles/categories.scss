@@ -1,3 +1,5 @@
+@import './vars.scss';
+
 .categories {
   width: 100%;
   padding: 50px 20px;
@@ -15,11 +17,11 @@
 
     .line{
       width: 30%;
-      border-bottom: $primary-black 3px;
+      border-bottom: $primary-black 3px solid;
     }
   }
 
-  .categories__cards {
+  &__cards {
     display: grid;
     gap: 30px;
     justify-items: center;
