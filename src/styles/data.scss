@@ -1,33 +1,33 @@
-@import './vars.scss';
+@import "./vars.scss";
 
-.data{
+.data {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 30px;
 
-  .cardData{
+  .cardData {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
-    
-    &>*{
-      font-family: 'Oswald', sans-serif;
+
+    & > * {
+      font-family: "Oswald", sans-serif;
     }
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
 
-    &__number{
+    &__number {
       font-size: 68px;
       color: $main-yellow;
       line-height: 1.2em;
       font-weight: 600;
     }
 
-    &__text{
+    &__text {
       font-size: 28px;
       font-weight: 600;
       text-transform: uppercase;
@@ -35,7 +35,7 @@
       color: $second-black;
     }
 
-    &__subText{
+    &__subText {
       font-size: 16px;
       font-weight: 500;
       color: $main-gray;
@@ -43,34 +43,31 @@
       line-height: 1;
     }
 
-    &__line{
+    &__line {
       background-color: $main-yellow;
       height: 5px;
       margin: 19px 0;
-      // margin-top: 10px;
       width: 70%;
     }
   }
 }
 
-
 @media screen and (min-width: 768px) {
-  .data{
-    // padding: 20px 50px ;
+  .data {
     flex-direction: row;
     justify-content: space-around;
-    .cardData{
+    .cardData {
       margin-bottom: 0;
     }
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .data{
+  .data {
     flex-direction: row;
     justify-content: space-around;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    .cardData{
+    .cardData {
       width: 220px;
       margin-bottom: 0;
     }
@@ -78,17 +75,17 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .data{
+  .data {
     position: absolute;
-    top:655px;
-    padding: 30px 60px ;
-    left: calc(50% - 500px);
+    top: 655px;
+    padding: 30px 60px;
+    left: calc(50% - 390px);
     z-index: 2;
     flex-direction: row;
     justify-content: space-around;
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    .cardData{
+    .cardData {
       padding: 10px;
     }
   }

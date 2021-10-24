@@ -1,68 +1,56 @@
-const dataYears = document.getElementById('dataYears')
-const dataWorks = document.getElementById('dataWorks')
-const dataShippings = document.getElementById('dataShippings')
-const dataWorkers = document.getElementById('dataWorkers')
+const dataYears = document.getElementById("dataYears");
+const dataWorks = document.getElementById("dataWorks");
+const dataShippings = document.getElementById("dataShippings");
+const dataWorkers = document.getElementById("dataWorkers");
 
-let firstTimeData = false
+let firstTimeData = false;
 
-function countDown (data,value, plusIcon=false, time=2000) {
+function countDown(data, value, plusIcon = false, time = 2000) {
+  let counter = 0;
 
-  let counter = 0 
+  const fps = time / value > 10 ? time / value : 20;
 
-  const fps = time / value > 10 ? time / value : 20
+  let incrementValue = (fps * value) / time;
 
-  let incrementValue = (fps * value) / time
+  const timer = setInterval(() => {
+    counter += incrementValue;
 
-  const timer = setInterval(()=>{
+    data.textContent = plusIcon ? `+${counter}` : counter;
 
-    counter += incrementValue
-
-    data.textContent = plusIcon ? `+${counter}` : counter
-  
-    if(counter == value){
-      clearInterval(timer)
+    if (counter == value) {
+      clearInterval(timer);
     }
-  
-  },fps)
-
+  }, fps);
 }
 
-const observerData = new IntersectionObserver((entries, observer)=>{
-
-  if(entries[0].isIntersecting){
-      countDown(dataYears,20)
-      countDown(dataWorks,400,true)
-      countDown(dataShippings,5000,true)
-      countDown(dataWorkers,1)
-      observer.unobserve(entries[0].target)
+const observerData = new IntersectionObserver(
+  (entries, observer) => {
+    if (entries[0].isIntersecting) {
+      countDown(dataYears, 20);
+      countDown(dataWorks, 400, true);
+      countDown(dataShippings, 5000, true);
+      observer.unobserve(entries[0].target);
     }
-  },{ threshold: [0] })
+  },
+  { threshold: [0] }
+);
 
-observerData.observe(dataYears)
-
-
-
+observerData.observe(dataYears);
 
 const appearOptions = {
   threshold: [0.5],
-  rootMargin:'0px 0px 0px 0px'
-
+  rootMargin: "0px 0px 0px 0px",
 };
 
-const appearOnScroll = new IntersectionObserver((entries,appearOnScroll)=>{
-
-  // console.log(entries[0])
-
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('appear');
-      appearOnScroll.unobserve(entry.target)
+const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
     }
-  })
-  }
-,appearOptions)
+  });
+}, appearOptions);
 
-
-document.querySelectorAll('.fade-in').forEach(fader=>{
-  appearOnScroll.observe(fader)
-})
+document.querySelectorAll(".fade-in").forEach((fader) => {
+  appearOnScroll.observe(fader);
+});
